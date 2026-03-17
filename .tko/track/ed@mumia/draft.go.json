@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_20-27-24",
+            "content": "@@ -150,26 +150,28 @@\n fmt.Printf(%22\n+'\n %25s\n+'\n  eh crianca%22\n@@ -219,26 +219,28 @@\n fmt.Printf(%22\n+'\n %25s\n+'\n  eh jovem%22, \n@@ -286,26 +286,28 @@\n fmt.Printf(%22\n+'\n %25s\n+'\n  eh adulto%22,\n@@ -360,18 +360,20 @@\n Printf(%22\n+'\n %25s\n+'\n  eh idos\n@@ -413,18 +413,20 @@\n Printf(%22\n+'\n %25s\n+'\n  mumia%22,\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_20-28-18",
+            "content": "@@ -167,17 +167,16 @@\n  crianca\n- \n %22, nome)\n@@ -232,17 +232,16 @@\n eh jovem\n- \n %22, nome)\n@@ -298,17 +298,16 @@\n h adulto\n- \n %22, nome)\n@@ -365,17 +365,16 @@\n eh idoso\n- \n %22, nome)\n@@ -413,17 +413,16 @@\n %25s mumia\n- \n %22, nome)\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_20-30-56",
+            "content": "@@ -167,18 +167,17 @@\n  crianca\n-%5Cn\n+ \n %22, nome)\n@@ -233,18 +233,17 @@\n eh jovem\n-%5Cn\n+ \n %22, nome)\n@@ -300,18 +300,17 @@\n h adulto\n-%5Cn\n+ \n %22, nome)\n@@ -368,18 +368,17 @@\n eh idoso\n-%5Cn\n+ \n %22, nome)\n@@ -421,10 +421,9 @@\n umia\n-%5Cn\n+ \n %22, n\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_20-32-11",
+            "content": "@@ -416,19 +416,16 @@\n ntf(%22%25s \n-eh \n mumia%5Cn%22\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-17_20-32-32",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n    var nome string\n    var idade int\n\n    fmt.Scan(&nome)\n    fmt.Scan(&idade)\n\n    if idade < 12{\n        fmt.Printf(\"%s eh crianca\\n\", nome)\n    }else if idade < 18{\n        fmt.Printf(\"%s eh jovem\\n\", nome)\n    }else if idade < 65{\n        fmt.Printf(\"%s eh adulto\\n\", nome)\n    }else if idade < 1000{\n        fmt.Printf(\"%s eh idoso\\n\", nome)\n    }else{\n        fmt.Printf(\"%s eh mumia\\n\", nome)\n    }\n}\n",
+            "lines": "22"
+        }
+    ]
+}
