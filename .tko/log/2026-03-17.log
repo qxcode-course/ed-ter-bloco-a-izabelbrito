@@ -32,3 +32,4 @@
 2026-03-17 21:23:01, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100, size:30
 2026-03-17 21:24:34, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100, size:39
 2026-03-17 21:24:48, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-17 21:37:43, SELF, v:1, k:ed@fuga, self:1, rate:100, study:40, friend:nao, problem:1
