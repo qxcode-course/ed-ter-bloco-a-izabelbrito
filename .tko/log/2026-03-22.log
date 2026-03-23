@@ -40,3 +40,23 @@
 2026-03-22 21:44:24, MOVE, v:1, k:ed@casais, mode:PICK
 2026-03-22 21:44:27, EXEC, v:1, k:ed@casais, mode:FULL, rate:100
 2026-03-22 21:44:29, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-22 22:14:04, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 22:14:08, EXEC, v:1, k:ed@gomos, mode:FULL, size:32, fail:COMP
+2026-03-22 22:14:28, EXEC, v:1, k:ed@gomos, mode:FULL, size:32, fail:COMP
+2026-03-22 22:15:21, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:32
+2026-03-22 22:17:04, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:34
+2026-03-22 22:17:24, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:34
+2026-03-22 22:21:37, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:38
+2026-03-22 22:24:22, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-22 22:24:54, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 22:24:57, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100
+2026-03-22 22:25:01, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-22 22:25:02, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 22:25:05, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-22 22:25:07, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 22:28:22, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-22 22:28:34, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 23:12:03, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-22 23:12:35, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100
+2026-03-22 23:12:41, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-22 23:13:37, SELF, v:1, k:ed@gomos, self:1, rate:100, study:70, friend:nao, concept:1, problem:1

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_22-14-08",
+            "content": "@@ -143,17 +143,17 @@\n     for \n-i\n+1\n  := q -1\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-22_22-14-28",
+            "content": "@@ -59,17 +59,17 @@\n   var d \n-s\n+S\n tring%0A%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-22_22-15-21",
+            "content": "@@ -351,70 +351,22 @@\n    f\n-or i := 0; i %3C q; i++%7B%0A        fmt.Println(%22x%5Bi%5D, y%5Bi%5D%22)%0A    %7D\n+mt.Println(%22%22)\n %0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-22_22-17-04",
+            "content": "@@ -390,16 +390,17 @@\n Println(\n+%22\n x%5Bi%5D, y%5B\n@@ -401,16 +401,17 @@\n i%5D, y%5Bi%5D\n+%22\n )%0A    %7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-22_22-17-24",
+            "content": "@@ -139,65 +139,8 @@\n q)%0A%0A\n-    for i := 0; i %3C q; i++%7B%0A%09%09fmt.Scan(&x%5Bi%5D, &y%5Bi%5D)%0A%09%7D%0A%0A\n     \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-22_22-21-37",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main(){\n\n    var q int\n    var d string\n\n    fmt.Scan(&q, &d)\n\n    x := make([]int, q)\n\ty := make([]int, q)\n\n    for i := 0; i < q; i++{\n\t\tfmt.Scan(&x[i], &y[i])\n\t}\n\n    for i := q -1; i > 0; i--{\n        x[i] = x[i - 1]\n        y[i] = y[i - 1]    \n    }\n\n    if d == \"L\"{\n\t\tx[0]--\n\t}else if d == \"R\"{\n\t\tx[0]++\n\t}else if d == \"U\"{\n\t\ty[0]--\n\t}else if d == \"D\"{\n\t\ty[0]++\n\t}\n\n    for i := 0; i < q; i++{\n        fmt.Println(x[i], y[i])\n    }\n   \n}\n",
+            "lines": "38"
+        }
+    ]
+}
