@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_20-20-41",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,644 +41,6 @@\n     \n-var n, qtd int%0A%0A    fmt.Scan(n, &qtd)%0A%0A    album := make(%5B%5Dbool, n++)%0A%0A    rep := false%0A%0A    for i := 0; 1 %3C qtd; i++%7B%0A        var fig int%0A%0A        fmt.Scan(&fig)%0A%0A        if album%5Bfig%5D == true%7B%0A            if rep == true%7B%0A                fmt.Print(%22 %22)%0A            %7D%0A            fmt.Print(fig)%0A%0A            rep = true%0A        %7Delse%7B%0A            album%5Bfig%5D = true%0A        %7D%0A%0A    %7D%0A%0A%09if rep == false%7B%0A%09%09fmt.Print(%22N%22)%0A%09%7D%0A%09fmt.Println()%0A%0A%09falta := false%0A%0A%09for i := 1; i %3C= n; 1++%7B%0A%09%09if v%5Bi%5D == false %7B%0A%09%09%09if falta == true%7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(i)%0A%09%09%09falta = true%0A%09%09%7D%0A%09%0A%0A%09if falta == false%7B%0A%09%09fmt.Print(%22N%22)%0A%09%7D%0A%09fmt.Println()\n %0A%7D\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-03-22_21-08-31",
+            "content": "@@ -106,17 +106,17 @@\n bool, n+\n-1\n++\n )%0A%0A    r\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-22_21-08-54",
+            "content": "@@ -620,21 +620,17 @@\n rue%0A%09%09%7D%0A\n-    %7D\n+%09\n %0A%0A%09if fa\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-22_21-09-11",
+            "content": "@@ -144,17 +144,17 @@\n i := 0; \n-i\n+1\n  %3C qtd; \n@@ -513,17 +513,17 @@\n i %3C= n; \n-i\n+1\n ++%7B%0A%09%09if\n@@ -523,21 +523,17 @@\n +%7B%0A%09%09if \n-album\n+v\n %5Bi%5D == f\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-22_21-16-00",
+            "content": "@@ -68,17 +68,16 @@\n mt.Scan(\n-&\n n, &qtd)\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-22_21-21-50",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main(){\n\n    var n, qtd int\n\n    fmt.Scan(&n, &qtd)\n\n    album := make([]bool, n+1)\n\n    rep := false\n\n    for i := 0; i < qtd; i++{\n        var fig int\n\n        fmt.Scan(&fig)\n\n        if album[fig] == true{\n            if rep == true{\n                fmt.Print(\" \")\n            }\n            fmt.Print(fig)\n\n            rep = true\n        }else{\n            album[fig] = true\n        }\n\n    }\n\n\tif rep == false{\n\t\tfmt.Print(\"N\")\n\t}\n\tfmt.Println()\n\n\tfalta := false\n\n\tfor i := 1; i <= n; i++{\n\t\tif album[i] == false {\n\t\t\tif falta == true{\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(i)\n\t\t\tfalta = true\n\t\t}\n    }\n\n\tif falta == false{\n\t\tfmt.Print(\"N\")\n\t}\n\tfmt.Println()\n}",
+            "lines": "54"
+        }
+    ]
+}

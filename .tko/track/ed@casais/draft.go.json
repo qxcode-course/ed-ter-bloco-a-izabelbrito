@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_18-51-25",
+            "content": "@@ -281,17 +281,16 @@\n nimal%5D++\n- \n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-22_18-53-34",
+            "content": "@@ -36,15 +36,13 @@\n in()\n+ \n %7B%0A%0A\n-    \n+%09\n var \n@@ -47,21 +47,17 @@\n r n int%0A\n-%0A    \n+%09\n fmt.Scan\n@@ -61,18 +61,14 @@\n can(\n-%22\n &n\n-%22\n )%0A\n-    \n+%0A%09\n solt\n@@ -94,20 +94,17 @@\n nt%5Dint)%0A\n-    \n+%09\n casais :\n@@ -108,20 +108,17 @@\n s := 0%0A%0A\n-    \n+%09\n for i :=\n@@ -131,26 +131,21 @@\n %3C n; i++\n+ \n %7B%0A\n-        \n+%09%09\n var anim\n@@ -151,25 +151,18 @@\n mal int%0A\n-%0A        \n+%09%09\n fmt.Scan\n@@ -172,24 +172,18 @@\n nimal)%0A%0A\n-        \n+%09%09\n par := -\n@@ -190,24 +190,18 @@\n animal%0A%0A\n-        \n+%09%09\n if solte\n@@ -217,43 +217,26 @@\n  %3E 0\n+ \n %7B%0A\n-            casais++%0A            \n+%09%09%09casais++%0A%09%09%09\n solt\n@@ -252,35 +252,22 @@\n %5D--%0A\n-        %7D\n+%09%09%7D \n else\n+ \n %7B%0A\n-            \n+%09%09%09\n solt\n@@ -285,30 +285,19 @@\n l%5D++\n-%0A        %7D%0A    %7D%0A%0A    \n+ %0A%09%09%7D%0A%09%7D%0A%0A%09\n fmt.\n@@ -308,16 +308,13 @@\n tln(\n-%22\n casais\n-%22\n )%0A%7D\n-%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-22_19-11-36",
+            "content": "@@ -385,18 +385,20 @@\n Println(\n+%22\n casais\n+%22\n )%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-22_19-11-57",
+            "content": "@@ -67,16 +67,13 @@\n can(\n+%22\n &n\n+%22\n )\n-%0A    \n %0A   \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-22_19-12-25",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main(){\n\n    var n int\n\n    fmt.Scan(&n)\n    \n    solteiros := make(map[int]int)\n    casais := 0\n\n    for i := 0; i < n; i++{\n        var animal int\n\n        fmt.Scan(&animal)\n\n        par := -animal\n\n        if solteiros[par] > 0{\n            casais++\n            solteiros[par]--\n        }else{\n            solteiros[animal]++\n        }\n    }\n\n    fmt.Println(casais)\n}\n",
+            "lines": "30"
+        }
+    ]
+}
