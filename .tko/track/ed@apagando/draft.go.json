@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-30_21-32-02",
+            "content": "@@ -164,21 +164,17 @@\n )%0A%0A%09\n+var \n saiu \n-:= make(\n map%5B\n@@ -181,17 +181,16 @@\n int%5Dbool\n-)\n %0A%09for i \n@@ -232,17 +232,16 @@\n mt.Scan(\n-&\n id)%0A%09%09sa\n@@ -294,9 +294,8 @@\n %09if \n-!\n saiu\n@@ -347,10 +347,9 @@\n rint\n-ln\n ()%0A%7D\n+%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-30_21-40-10",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tfila := make([]int, n)\n\tfor i := range fila {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tvar m int\n\tfmt.Scan(&m)\n\n\tsaiu := make(map[int]bool)\n\tfor i := 0; i < m; i++ {\n\t\tvar id int\n\t\tfmt.Scan(&id)\n\t\tsaiu[id] = true\n\t}\n\n\tfor _, id := range fila {\n\t\tif !saiu[id] {\n\t\t\tfmt.Printf(\"%d \", id)\n\t\t}\n\t}\n\tfmt.Println()\n}",
+            "lines": "30"
+        }
+    ]
+}
