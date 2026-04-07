@@ -13,8 +13,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@map_set
 - ed@rec
+- ed@map_set
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, friend:nao, concept:1, debug:1}'
   ed@mumia: '{self:1, rate:100, study:15, friend:nao, guided:1}'
@@ -29,6 +29,7 @@ tasks:
     refactor:1}'
   ed@resto: '{self:1, rate:100, study:30, concept:1, refactor:1}'
   ed@queimada: '{rate:14}'
+  ed@vetequals: '{self:1, rate:100, study:20, concept:1}'
 flags:
   panel: 0
   inbox: 0
@@ -36,4 +37,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@resto
+selected: ed@vetequals
