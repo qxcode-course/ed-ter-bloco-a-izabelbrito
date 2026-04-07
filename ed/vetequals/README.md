@@ -1,3 +1,4 @@
+
 # Verifique se dois vetores são iguais recursivamente
 
 Este documento descreve um método para verificar se dois vetores são iguais de forma recursiva.
