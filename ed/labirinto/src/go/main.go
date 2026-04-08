@@ -23,8 +23,32 @@ func match(grid [][]rune, p Pos, value rune) bool {
 }
 
 // Função recursiva que tenta encontrar o caminho do início ao fim
-func search(grid [][]rune, startPos, endPos Pos) bool {
-	_, _, _ = grid, startPos, endPos
+func search(grid [][]rune, curr Pos, end Pos) bool {
+	if curr.l < 0 || curr.l >= len(grid) || curr.c < 0 || curr.c >= len(grid[0]) || grid[curr.l][curr.c] != ' ' {
+		return false
+	}
+
+	grid[curr.l][curr.c] = '.'
+
+	if curr == end {
+		return true
+	}
+
+	vizinhos := []Pos{
+		{curr.l - 1, curr.c},
+		{curr.l + 1, curr.c},
+		{curr.l, curr.c - 1},
+		{curr.l, curr.c + 1},
+	}
+
+	for _, vizinho := range vizinhos {
+		if search(grid, vizinho, end) {
+			return true
+		}
+	}
+
+	grid[curr.l][curr.c] = ' '
+
 	return false
 }
 
