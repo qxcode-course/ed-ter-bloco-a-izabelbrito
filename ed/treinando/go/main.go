@@ -17,7 +17,7 @@ func tostr(vet []int) string {
 		if len(v) == 1 {
 			return strconv.Itoa(v[0])
 		}
-		return strconv.Itoa(v[0]) + rec(v[1:])
+		return strconv.Itoa(v[0]) + ", " + rec(v[1:])
 	}
 	return "[" + rec(vet) + "]"
 }
@@ -40,7 +40,8 @@ func reverse(vet []int) {
 	if len(vet) <= 1 {
 		return
 	}
-	vet[0], vet[1] = vet[1], vet[0]
+	vet[0], vet[len(vet) - 1] = vet[len(vet) - 1], vet[0]
+
 	reverse(vet[1 : len(vet)-1])
 }
 
@@ -53,7 +54,7 @@ func sum(vet []int) int {
 
 func mult(vet []int) int {
 	if len(vet) == 0 {
-		return 0
+		return 1
 	}
 	return vet[0] * mult(vet[1:])
 }
@@ -68,7 +69,7 @@ func min(vet []int) int {
 			return v[0], 0
 		}
 		valR, indR := rec(v[1:])
-		if v[0] >= valR {
+		if v[0] <= valR {
 			return v[0], 0
 		}
 		return valR, indR+1

@@ -1,0 +1,35 @@
+2026-04-07 10:26:57, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-07 10:28:58, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-07 10:29:18, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-07 10:30:19, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-07 10:30:25, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-07 10:31:48, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-07 10:41:36, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-07 10:41:48, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-07 10:44:09, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-07 10:44:17, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-07 10:48:42, EXEC, v:1, k:Estrutura de Dados@ed-ter-bloco-a-izabelbrito, mode:FREE, size:1006
+2026-04-07 10:49:22, EXEC, v:1, k:fractais_png@go, mode:FREE, size:136
+2026-04-07 10:50:01, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-07 10:50:52, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-07 21:19:41, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-07 21:20:08, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:117
+2026-04-07 21:20:33, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-07 21:20:36, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-07 21:20:44, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-07 21:20:53, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-07 21:21:00, EXEC, v:1, k:ed@triangulo, mode:FREE, size:47
+2026-04-07 21:23:00, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-07 21:25:07, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-07 21:27:43, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-07 21:28:04, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-04-07 21:28:26, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-07 21:45:41, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50, size:117
+2026-04-07 21:49:13, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50
+2026-04-07 21:53:08, EXEC, v:1, k:ed@treinando, mode:FULL, rate:66, size:117
+2026-04-07 21:57:30, EXEC, v:1, k:ed@treinando, mode:FULL, rate:83, size:118
+2026-04-07 21:57:56, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100, size:118
+2026-04-07 21:58:43, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-07 21:59:16, SELF, v:1, k:ed@treinando, self:1, rate:100, study:50, concept:1, debug:1, refactor:1
+2026-04-07 21:59:33, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-07 22:00:12, MOVE, v:1, k:ed@triangulo, mode:BACK
