@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_11-22-11",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n    var total_album int\n    var total_baruel int\n    var figura int\n\n    fmt.Scan(&total_album,&total_baruel)\n\n\tvar contagem [55]int\n\tfor i := 0; i < total_baruel; i++ {\n\t\tfmt.Scan(&figura)\n\t\tcontagem[figura]++\n\t}\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "lines": "17"
+        }
+    ]
+}

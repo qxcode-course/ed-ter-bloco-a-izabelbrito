@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_10-29-04",
+            "content": "@@ -274,11 +274,11 @@\n %5Bpar\n-%5D\n --\n+%5D\n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-14_10-29-32",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n\n  var n int\n\n  fmt.Scan(&n)\n\n  descasados := make(map[int]int)\n  casais := 0\n\n  for i := 0; i < n; i++{\n\n    var animal int\n\n    fmt.Scan(&animal)\n\n    par := -animal\n\n    if descasados[par] > 0{\n        casais++\n        descasados[par]--\n    }else{\n        descasados[animal]++\n    }\n  }\n\nfmt.Println(casais)\n\n}\n",
+            "lines": "31"
+        }
+    ]
+}
