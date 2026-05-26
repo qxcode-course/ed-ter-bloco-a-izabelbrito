@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-25_21-31-48",
+            "content": "@@ -173,16 +173,22 @@\n Text()%0A%0A\n+    %7D%0A\n %0A    l :\n@@ -345,36 +345,11 @@\n   %7D%0A\n-%0A\n     \n-fmt.Println()%0A    %0A    %7D\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-25_22-08-05",
+            "content": "@@ -177,55 +177,8 @@\n ()%0A%0A\n-        if textoEntrada == %22%22%7B%0A%09%09%09continue%0A%09%09%7D%0A\n %0A   \n@@ -230,202 +230,8 @@\n ')%0A%0A\n-    for _, char := range textoEntrada%7B%0A        switch char%7B%0A        case 'R' :%0A            l.InsertBefore('%5Cn', cursor)%0A        default:%0A            l.InsertBefore(char,cursor)%0A        %7D%0A    %7D%0A%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-25_22-14-05",
+            "content": "@@ -397,301 +397,8 @@\n or)%0A\n-        case '%3C':%0A            ladoEsquerdo := cursor.Prev()%0A            if ladoEsquerdo := nil%7B%0A                l.MoveBefore(cursor, ladoEsquredo)%0A            %7D%0A        case '%3E':%0A%09%09%09%09ladoDireito := cursor.Next()%0A%09%09%09%09if ladoDireito != nil%7B%0A%09%09%09%09%09l.MoveAfter(cursor, ladoDireito)%0A%09%09%09%09%7D%0A        %7D%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-25_22-26-34",
+            "content": "@@ -136,16 +136,17 @@\n r.Scan()\n+ \n %7B%0A%09%09text\n@@ -481,17 +481,17 @@\n squerdo \n-!\n+:\n = nil%7B%0A \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-25_22-27-40",
+            "content": "@@ -893,10 +893,15 @@\n )%0A    %0A \n+   %7D%0A\n %7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-25_22-28-12",
+            "content": "@@ -675,16 +675,26 @@\n )%0A%09%09%09%09%7D%0A\n+        %7D%0A\n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-25_22-29-28",
+            "content": "@@ -881,12 +881,12 @@\n n()%0A    \n-%7D\n %0A\n+ \n %7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-25_22-30-10",
+            "content": "@@ -533,18 +533,18 @@\n ladoEsqu\n-e\n r\n+e\n do)%0A    \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-25_22-30-31",
+            "content": "@@ -679,303 +679,8 @@\n %09%09%7D%0A\n-        case 'B':%0A            ladoEsquerdo := cursor.Prev()%0A            if ladoEsquerdo != nil%7B%0A                l.Remove(ladoEsquerdo)%0A            %7D%0A        case 'D':%0A            ladoDireito := cursor.Next()%0A            if ladoDireito != nil%7B%0A                l.Remove(ladoDireito)%0A            %7D%0A\n     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-25_22-37-53",
+            "content": "package main\nimport (\n\t\"bufio\"\n\t\"container/list\"\n\t\"fmt\"\n\t\"os\"\n)\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n\n    for scanner.Scan(){\n\t\ttextoEntrada := scanner.Text()\n\n        if textoEntrada == \"\"{\n\t\t\tcontinue\n\t\t}\n\n    l := list.New()\n\n    cursor := l.PushBack('|')\n\n    for _, char := range textoEntrada{\n        switch char{\n        case 'R' :\n            l.InsertBefore('\\n', cursor)\n        case '<':\n            ladoEsquerdo := cursor.Prev()\n            if ladoEsquerdo != nil{\n                l.MoveBefore(cursor, ladoEsquerdo)\n            }\n        case '>':\n\t\t\t\tladoDireito := cursor.Next()\n\t\t\t\tif ladoDireito != nil{\n\t\t\t\t\tl.MoveAfter(cursor, ladoDireito)\n\t\t\t\t}\n        case 'B':\n            ladoEsquerdo := cursor.Prev()\n            if ladoEsquerdo != nil{\n                l.Remove(ladoEsquerdo)\n            }\n        case 'D':\n            ladoDireito := cursor.Next()\n            if ladoDireito != nil{\n                l.Remove(ladoDireito)\n            }\n        default:\n            l.InsertBefore(char,cursor)\n        }\n    }\n\n    for node:= l.Front(); node != nil; node = node.Next(){\n        fmt.Printf(\"%c\", node.Value.(rune))\n    }\n\n    fmt.Println()\n    }\n}\n",
+            "lines": "57"
+        }
+    ]
+}

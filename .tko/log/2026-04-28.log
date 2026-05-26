@@ -1,0 +1,20 @@
+2026-04-28 08:49:12, MOVE, v:1, k:ed@distancia, mode:DOWN
+2026-04-28 08:49:18, MOVE, v:1, k:ed@wordsearch, mode:DOWN
+2026-04-28 08:49:23, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-04-28 09:06:26, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25, size:62
+2026-04-28 09:06:35, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-04-28 09:09:26, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-04-28 09:09:30, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-04-28 09:15:20, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:69, fail:COMP
+2026-04-28 09:16:12, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-04-28 09:16:25, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-04-28 09:16:27, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:69, fail:COMP
+2026-04-28 09:16:29, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-04-28 09:17:07, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-04-28 09:19:28, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:73, fail:COMP
+2026-04-28 09:22:41, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-04-28 09:22:48, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-04-28 09:58:56, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:5
+2026-04-28 09:59:04, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-04-28 09:59:13, MOVE, v:1, k:ed@subset_sum, mode:DOWN
+2026-04-28 09:59:16, MOVE, v:1, k:ed@subset_sum, mode:PICK
