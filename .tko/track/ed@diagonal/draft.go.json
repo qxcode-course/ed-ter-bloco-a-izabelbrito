@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_15-06-36",
+            "content": "@@ -316,16 +316,18 @@\n mt.Print\n+ln\n (palavra\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-17_15-06-56",
+            "content": "@@ -307,32 +307,25 @@\n    %0A    \n-palavra_diagonal\n+fmt.Print\n (palavra\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-17_15-07-19",
+            "content": "@@ -187,17 +187,17 @@\n rintf(%22%25\n-c\n+s\n %5Cn%22, s%5B0\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-17_15-08-19",
+            "content": "package main\nimport \"fmt\"\n\nfunc palavra_diagonal(s string, k int){\n    if len(s) == 0{\n        return\n    }\n\n    for i := 0; i < k; i++ {\n        fmt.Print(\" \")\n        \n    }\n\n    fmt.Printf(\"%c\\n\", s[0])\n\n    palavra_diagonal(s[1:], k + 1)\n}\nfunc main() {\n    var palavra string\n\n    fmt.Scan(&palavra)\n    \n    palavra_diagonal(palavra, 0)\n}\n",
+            "lines": "24"
+        }
+    ]
+}

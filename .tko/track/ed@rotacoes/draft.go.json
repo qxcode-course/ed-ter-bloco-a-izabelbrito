@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_16-11-20",
+            "content": "@@ -421,12 +421,10 @@\n f(%22%5B\n- \n %25s\n- \n %5D%5Cn%22\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-17_16-11-51",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"strings\"\n)\n\nfunc main() {\n   var T, R int\n\n   if _, err := fmt.Scan(&T, &R); err != nil{\n            return\n   }\n\n   vetor := make([]string, T)\n\n   for i := 0; i < T; i++ {\n    fmt.Scan(&vetor[i]) \n   }\n\n   R = R % T\n\n   corte := T - R\n\n   var rotacionar []string\n   rotacionar = append(rotacionar, vetor[corte:]...)\n   rotacionar = append(rotacionar, vetor[:corte]...)\n\n   fmt.Printf(\"[ %s ]\\n\", strings.Join(rotacionar, \" \"))\n}\n",
+            "lines": "29"
+        }
+    ]
+}

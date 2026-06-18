@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_14-23-05",
+            "content": "package main\nimport( \n       \"fmt\"\n       \"strconv\"\n       \"strings\"\n)\nfunc eh_primo(x int, div int) bool{\n    if x < 2 {\n\t\treturn false\n\t}\n\tif x == 2 {\n\t\treturn true\n\t}\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\tif div*div > x {\n\t\treturn true\n\t}\n\treturn eh_primo(x, div+1)\n\n}\nfunc guarda_primos(n int, atual int, primos []int) []int{\n    if len(primos) == n{\n        return primos\n    }\n\n    if eh_primo(atual, 2){\n        primos = append(primos, atual)\n    }\n\n    return guarda_primos(n, atual + 1, primos)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    \n    resultado := guarda_primos(n, 2, []int{})\n\n    var sb strings.Builder\n    sb.WriteString(\"[\")\n\n    for i, p := range resultado{\n        if i > 0{\n            sb.WriteString(\", \")\n        }\n\n        sb.WriteString(strconv.Itoa(p))\n    }\n\n    sb.WriteString(\"]\")\n    fmt.Println(sb.String())\n    \n}\n",
+            "lines": "55"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_13-51-53",
+            "content": "@@ -559,9 +559,8 @@\n ado \n-:\n = en\n@@ -575,16 +575,17 @@\n imo(\n+(\n n, 2, 0)\n %0A%0A  \n@@ -580,16 +580,17 @@\n n, 2, 0)\n+)\n %0A%0A    fm\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-17_13-52-26",
+            "content": "package main\nimport \"fmt\"\n\nfunc eh_primo( x int, div int) bool{\n    if x < 2 {\n        return false\n    }\n\n    if x == 2 {\n        return true\n    }\n\n    if x % div == 0 {\n        return false\n    }\n\n    if div * div > x {\n        return true\n    }\n\n    return eh_primo(x, div + 1)\n}\n\nfunc enesimo_primo(n int, atual int, cont int) int{\n    if eh_primo(atual, 2){\n        cont++\n\n        if cont == n{\n            return atual\n        }\n        \n    }\n\n    return enesimo_primo(n, atual + 1, cont)\n\n}\nfunc main() {\n\n    var n int\n    fmt.Scan(&n)\n\n    resultado := enesimo_primo(n, 2, 0)\n\n    fmt.Println(resultado)\n\n    \n}\n",
+            "lines": "47"
+        }
+    ]
+}

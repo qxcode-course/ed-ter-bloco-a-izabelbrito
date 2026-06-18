@@ -7,3 +7,16 @@
 2026-05-26 00:04:59, MOVE, v:1, k:ed@controlz, mode:DOWN
 2026-05-26 00:05:00, MOVE, v:1, k:ed@controlz, mode:PICK
 2026-05-26 00:09:13, MOVE, v:1, k:ed@controlz, mode:BACK
+2026-05-26 07:44:13, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-26 07:44:18, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-26 07:44:26, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-26 07:45:48, SELF, v:1, k:ed@editorint, self:1, rate:100, study:60, concept:1, refactor:1
+2026-05-26 10:22:58, MOVE, v:1, k:ed@setbuild, mode:DOWN
+2026-05-26 10:26:44, MOVE, v:1, k:ed@bufferring, mode:DOWN
+2026-05-26 10:26:45, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-05-26 10:40:21, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-05-26 10:43:16, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-05-26 10:45:46, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-05-26 19:17:58, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-26 19:57:37, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-26 19:57:39, MOVE, v:1, k:ed@vetbuild, mode:BACK

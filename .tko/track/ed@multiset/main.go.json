@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_16-58-33",
+            "content": "@@ -567,16 +567,18 @@\n Stdin)%0A%09\n+//\n  ms := N\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-17_16-59-22",
+            "content": "@@ -174,18 +174,16 @@\n ltiSet%7B%0A\n-%09%0A\n %09return \n@@ -193,16 +193,16 @@\n ltiSet%7B%0A\n+\n %09%09data: \n@@ -275,964 +275,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) expand()%7B%0A%09%0A%09if ms.capacity == 0%7B%0A%09%09ms.capacity = 1%0A%09%7Delse%7B%0A%09%09ms.capacity *= 2%0A%09%7D%0A%0A%09newData := make(%5B%5Dint, ms.capacity)%0A%09copy(newData, ms.data%5B:ms.size%5D)%0A%09ms.data = newData%0A%7D%0A%0Afunc (ms *MultiSet) search(value int) (bool, int)%7B%0A%09low, high := 0, ms.size%0A%0A%09for low %3C high%7B%0A%09%09mid := low + (high - low) / 2%0A%0A%09%09if ms. data%5Bmid%5D %3C= value%7B%0A%09%09%09low = mid + 1%0A%09%09%7Delse%7B%0A%09%09%09high = mid%0A%09%09%7D%0A%09%7D%0A%0A%09if low %3E 0 && ms.data%5Blow - 1%5D == value%7B%0A%09%09return true, low - 1%0A%09%7D%0A%0A%09return false, low%0A%7D%0A%0Afunc (ms *MultiSet) insert(value int, index int) error%7B%0A%0A%09if ms.size == ms.capacity%7B%0A%09%09ms.expand()%0A%09%7D%0A%0A%09for i := ms.size; i %3E index; i--%7B%0A%09%09ms.data%5Bi%5D = ms.data%5Bi - 1%5D%0A%09%7D%0A%0A%09ms.data%5Bindex%5D = value%0A%09ms.size++%0A%09return nil%0A%7D%0A%0Afunc (ms *MultiSet) Insert(value int)%7B%0A%09found, index := ms.search(value)%0A%0A%09if found%7B%0A%09%09ms.insert(value, index + 1)%0A%09%7Delse%7B%0A%09%09ms.insert(value, index)%0A%09%7D%0A%7D%0A%0Afunc (ms *MultiSet) String() string%7B%0A%09return %22%5B%22 + Join(ms.data%5B:ms.size%5D, %22,%22) + %22%5D%22%0A%7D%0A\n %0Afun\n@@ -567,18 +567,17 @@\n Stdin)%0A%09\n-%0A%09\n+ \n ms := Ne\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-17_17-40-49",
+            "content": "@@ -1856,16 +1856,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -1894,16 +1894,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1936,72 +1936,27 @@\n %0A%09%09%09\n-%09ms.Insert(value)%0A%09%09%7D%0A%09%09case %22show%22:%0A%09%09%09fmt.Println(ms.String())\n+// %7D%0A%09%09case %22show%22:\n %0A%09%09c\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-06-17_17-44-53",
+            "content": "@@ -1218,17 +1218,16 @@\n ize%5D, %22,\n- \n %22) + %22%5D%22\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-06-17_17-45-15",
+            "content": "@@ -1145,406 +1145,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Contains(value int) bool%7B%0A%09found, _ := ms.search(value)%0A%09return found%0A%7D%0A%0Afunc (ms *MultiSet) Erase(value int) error%7B%0A%09found, index := ms.search(value)%0A%0A%09if found%7B%0A%09%09return ms.erase(index)%0A%09%7D%0A%09return fmt.Errorf(%22value not found%22)%0A%7D%0A%0Afunc (ms *MultiSet) erase(index int) error%7B%0A%09%0A%09for i := index; i %3C ms.size - 1; i++%7B%0A%09%09ms.data%5Bi%5D = ms.data%5Bi + 1%5D%0A%09%7D%0A%0A%09ms.size--%0A%09return nil%0A%7D%0A%0A%0A\n func\n@@ -2007,24 +2007,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2052,86 +2052,8 @@\n 1%5D)%0A\n-%09%09%09err := ms.Erase(value)%0A%09%09%09if err != nil%7B%0A%09%09%09%09fmt.Println(err.Error())%0A%09%09%09%7D%0A\n %09%09ca\n@@ -2066,24 +2066,27 @@\n ntains%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2111,43 +2111,8 @@\n 1%5D)%0A\n-%09%09%09fmt.Println(ms.Contains(value))%0A\n %09%09ca\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-06-17_17-58-07",
+            "content": "@@ -1542,436 +1542,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Count(value int) int%7B%0A%09found, index := ms.search(value)%0A%0A%09if !found%7B%0A%09%09return 0%0A%09%7D%0A%0A%09count := 0%0A%0A%09for i := index; i %3E= 0 && ms.data%5Bi%5D == value; i--%7B%0A%09%09count++%0A%09%7D%0A%0A%09return count%0A%7D%0A%0Afunc (ms *MultiSet) Unique() int%7B%0A%0A%09if ms.size == 0%7B%0A%09%09return 0%0A%09%7D%0A%0A%09count := 1%0A%0A%09for i := 1;i %3C ms.size; i++%7B%0A%0A%09%09id ms.data%5Bi%5D!= ms.data%5Bi - 1%5D%7B%0A%09%09%09count++%0A%09%09%7D%0A%09%7D%0A%0A%09return count%0A%7D%0A%0A%0Afunc (ms *MultiSet) Clear()%7B%0A%09ms.size = 0%0A%7D%0A\n %0Afun\n@@ -2627,24 +2627,27 @@\n %22count%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2674,113 +2674,38 @@\n )%0A%09%09\n-%09fmt.Println(ms.Count(value))%0A%0A%09%09case %22unique%22:%0A%09%09%09fmt.Println(ms.Unique())%0A%09%09case %22clear%22:%0A%09%09%09ms.Clear()\n+case %22unique%22:%0A%09%09case %22clear%22:\n %0A%09%09d\n",
+            "lines": "170"
+        },
+        {
+            "label": "2026-06-17_18-06-37",
+            "content": "@@ -1854,19 +1854,17 @@\n ++%7B%0A%0A%09%09i\n- :=\n+d\n  ms.data\n",
+            "lines": "212"
+        },
+        {
+            "label": "2026-06-17_18-08-29",
+            "content": "@@ -1850,25 +1850,27 @@\n e; i++%7B%0A%0A%09%09i\n-f\n+ :=\n  ms.data%5Bi%5D!\n@@ -3119,32 +3119,33 @@\n s.Count(value))%0A\n+%0A\n %09%09case %22unique%22:\n",
+            "lines": "212"
+        },
+        {
+            "label": "2026-06-17_18-09-26",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype MultiSet struct{\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewMultiSet(capacity int) *MultiSet{\n\t\n\treturn &MultiSet{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (ms *MultiSet) expand(){\n\t\n\tif ms.capacity == 0{\n\t\tms.capacity = 1\n\t}else{\n\t\tms.capacity *= 2\n\t}\n\n\tnewData := make([]int, ms.capacity)\n\tcopy(newData, ms.data[:ms.size])\n\tms.data = newData\n}\n\nfunc (ms *MultiSet) search(value int) (bool, int){\n\tlow, high := 0, ms.size\n\n\tfor low < high{\n\t\tmid := low + (high - low) / 2\n\n\t\tif ms. data[mid] <= value{\n\t\t\tlow = mid + 1\n\t\t}else{\n\t\t\thigh = mid\n\t\t}\n\t}\n\n\tif low > 0 && ms.data[low - 1] == value{\n\t\treturn true, low - 1\n\t}\n\n\treturn false, low\n}\n\nfunc (ms *MultiSet) insert(value int, index int) error{\n\n\tif ms.size == ms.capacity{\n\t\tms.expand()\n\t}\n\n\tfor i := ms.size; i > index; i--{\n\t\tms.data[i] = ms.data[i - 1]\n\t}\n\n\tms.data[index] = value\n\tms.size++\n\treturn nil\n}\n\nfunc (ms *MultiSet) Insert(value int){\n\tfound, index := ms.search(value)\n\n\tif found{\n\t\tms.insert(value, index + 1)\n\t}else{\n\t\tms.insert(value, index)\n\t}\n}\n\nfunc (ms *MultiSet) Contains(value int) bool{\n\tfound, _ := ms.search(value)\n\treturn found\n}\n\nfunc (ms *MultiSet) Erase(value int) error{\n\tfound, index := ms.search(value)\n\n\tif found{\n\t\treturn ms.erase(index)\n\t}\n\treturn fmt.Errorf(\"value not found\")\n}\n\nfunc (ms *MultiSet) erase(index int) error{\n\t\n\tfor i := index; i < ms.size - 1; i++{\n\t\tms.data[i] = ms.data[i + 1]\n\t}\n\n\tms.size--\n\treturn nil\n}\n\nfunc (ms *MultiSet) Count(value int) int{\n\tfound, index := ms.search(value)\n\n\tif !found{\n\t\treturn 0\n\t}\n\n\tcount := 0\n\n\tfor i := index; i >= 0 && ms.data[i] == value; i--{\n\t\tcount++\n\t}\n\n\treturn count\n}\n\nfunc (ms *MultiSet) Unique() int{\n\n\tif ms.size == 0{\n\t\treturn 0\n\t}\n\n\tcount := 1\n\n\tfor i := 1;i < ms.size; i++{\n\n\t\tif ms.data[i]!= ms.data[i - 1]{\n\t\t\tcount++\n\t\t}\n\t}\n\n\treturn count\n}\n\n\nfunc (ms *MultiSet) Clear(){\n\tms.size = 0\n}\n\nfunc (ms *MultiSet) String() string{\n\treturn \"[\" + Join(ms.data[:ms.size], \", \") + \"]\"\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\t\n\tms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = args[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range args[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tms.Insert(value)\n\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(ms.String())\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\terr := ms.Erase(value)\n\t\t\tif err != nil{\n\t\t\t\tfmt.Println(err.Error())\n\t\t\t}\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tfmt.Println(ms.Contains(value))\n\t\tcase \"count\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tfmt.Println(ms.Count(value))\n\t\tcase \"unique\":\n\t\t\tfmt.Println(ms.Unique())\n\t\tcase \"clear\":\n\t\t\tms.Clear()\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "211"
+        }
+    ]
+}

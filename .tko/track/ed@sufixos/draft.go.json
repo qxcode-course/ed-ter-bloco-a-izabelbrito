@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_15-23-14",
+            "content": "@@ -123,10 +123,8 @@\n rint\n-ln\n (s)%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-17_15-23-35",
+            "content": "package main\nimport \"fmt\"\n\nfunc sufixos(s string){\n    if len(s) == 0{\n        return\n    }\n\n    sufixos(s[1:])\n\n    fmt.Println(s)\n}\nfunc main() {\n    var palavra string\n\n    fmt.Scan(&palavra)\n\n    sufixos(palavra)\n}\n",
+            "lines": "19"
+        }
+    ]
+}

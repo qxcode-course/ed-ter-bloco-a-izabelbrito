@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -22,7 +23,7 @@ func NewVector(capacity int) *Vector {
 
 func (v *Vector) String() string{
 	if v.size == 0{
-		return"[]
+		return"[]"
 	}
 	var result strings.Builder
 	result.WriteString("[")

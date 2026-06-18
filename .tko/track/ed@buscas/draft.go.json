@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_15-36-42",
+            "content": "@@ -10,48 +10,20 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22\n-%0A%09%22strconv%22%0A%09%22strings%22%0A)\n %0A%0Afu\n@@ -62,21 +62,8 @@\n %0A   \n- if _, err :=\n  fmt\n@@ -68,17 +68,16 @@\n mt.Scan(\n-(\n &tamanho\n@@ -81,43 +81,8 @@\n nho)\n-); err != nil%7B%0A        return%0A    %7D\n %0A%0A  \n@@ -262,351 +262,37 @@\n %0A   \n-var tamanho_consultas int%0A  %0A   fmt.Scan(&tamanho_consultas)%0A%0A   var resultados %5B%5Dstring%0A%0A   for i := 0; i %3C tamanho_consultas; i++ %7B%0A    var consulta string%0A    fmt.Scan(&consulta)%0A%0A    ocorrencias := frequencias%5Bconsulta%5D%0A%0A    resultados = append(resultados, strconv.Itoa(ocorrencias))%0A    %0A   %7D%0A%0A   fmt.Println(strings.Join(resultados, %22 %22))\n+ fmt.Println(frequencias)%0A    \n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-17_15-44-14",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc main() {\n    var tamanho int\n\n    if _, err := fmt.Scan((&tamanho)); err != nil{\n        return\n    }\n\n    frequencias := make(map[string]int)\n\n    for i := 0; i < tamanho; i++ {\n        var palavra string\n        fmt.Scan(&palavra)\n        \n        frequencias[palavra]++\n    }\n   var tamanho_consultas int\n  \n   fmt.Scan(&tamanho_consultas)\n\n   var resultados []string\n\n   for i := 0; i < tamanho_consultas; i++ {\n    var consulta string\n    fmt.Scan(&consulta)\n\n    ocorrencias := frequencias[consulta]\n\n    resultados = append(resultados, strconv.Itoa(ocorrencias))\n    \n   }\n\n   fmt.Println(strings.Join(resultados, \" \"))\n}\n",
+            "lines": "41"
+        }
+    ]
+}
