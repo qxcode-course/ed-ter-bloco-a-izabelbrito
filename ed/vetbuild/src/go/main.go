@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -38,7 +39,6 @@ func (v *Vector) String() string{
 	
 }
 
-
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -49,6 +49,140 @@ func Join(slice []int, sep string) string {
 		fmt.Fprintf(&result, "%s%d", sep, value)
 	}
 	return result.String()
+}
+
+func (v *Vector) Reserve(newCapacity int){
+	if newCapacity > v.capacity{
+		newData := make([]int, newCapacity)
+
+		for i := 0; i < v.size; i++ {
+			newData[i] = v.data[i]
+		}
+
+		v.data = newData
+		v.capacity = newCapacity
+	}
+}
+
+func (v *Vector) PushBack(value int){
+	if v.size == v.capacity{
+		newCap := v.capacity * 2
+		if newCap == 0{
+			newCap = 1
+		}
+
+		v.Reserve(newCap)
+	}
+
+	v.data[v.size] = value
+	v.size++
+}
+
+func(v *Vector) Status() string{
+	return fmt.Sprintf("size:%d capacity:%d", v.size, v.capacity)
+}
+
+func (v *Vector) Capacity() int{
+	return v.capacity
+}
+
+func (v *Vector) Clear() {
+	v.size = 0
+}
+
+func (v *Vector) Get(index int) int{
+	return v.data[index]
+}
+
+func (v *Vector) At(index int) (int, error) {
+	if index < 0 || index >= v.size{
+		return 0, fmt.Errorf("index out of range")
+	}
+
+	return  v.data[index], nil
+}
+
+func (v *Vector) Set(index, value int) error {
+	if index < 0 || index >= v.size{
+		return fmt.Errorf("index out of range")
+	}
+	v.data[index] = value
+	return nil
+}
+
+func (v *Vector) PopBack() (int,error){
+	if v.size == 0{
+		return 0, fmt.Errorf("vector is empty")
+	}
+
+	v.size--
+	return v.data[v.size], nil
+}
+
+func (v *Vector) Insert(index, value int) error{
+	if index < 0 || index > v.size{
+		return fmt.Errorf("index out of range")
+	}
+
+	if v.size == v.capacity{
+		newCap := v.capacity * 2
+		if newCap == 0{
+			newCap = 1
+		}
+		v.Reserve(newCap)
+	}
+
+	for i := v.size; i > index; i--{
+		v.data[i] = v.data[i - 1]
+		
+	}
+
+	v.data[index] = value
+	v.size++
+	return nil		
+}
+
+func (v *Vector) Erase(index int) error{
+	if index < 0 || index > v.size{
+		return fmt.Errorf("index out of range")
+	}
+
+	for i := index; i < v.size - 1; i++ {
+		v.data[i] = v.data[i + 1]	
+	}
+	v.size--
+	return nil
+}
+
+func (v *Vector) IndexOf(value int) int{
+
+	for i := 0; i < v.size; i++{
+		if v.data[i] == value{
+			return i
+		}
+	}
+
+	return -1
+}
+
+func (v *Vector) Contains(value int) bool{
+	return v.IndexOf(value) != -1
+}
+
+func (v *Vector) Slice(start, end int) *Vector{
+
+	if start < 0{
+		start += v.size
+	}
+	if end < 0{
+		end += v.size
+	}
+
+	return &Vector{
+		data: v.data[start: end],
+		size: end - start,
+		capacity: v.capacity - start,
+	}
 }
 
 func main() {
@@ -85,8 +219,8 @@ func main() {
 		case "status":
 			fmt.Println(v.Status())
 		case "pop":
-			err := v.PopBack()
-		if err != nil {
+			_, err := v.PopBack()
+			if err != nil {
 			fmt.Println(err)
 			}
 		case "insert":
@@ -111,7 +245,7 @@ func main() {
 			if v.Contains(value) {
 			fmt.Println("true")
 			} else {
-			 	fmt.Println("false")
+				fmt.Println("false")
 			}
 		case "clear":
 			v.Clear()
@@ -131,8 +265,7 @@ func main() {
 			err := v.Set(index, value)
 			if err != nil {
 			 	fmt.Println(err)
-			}
-			 
+			} 
 		case "reserve":
 			newCapacity, _ := strconv.Atoi(parts[1])
 			v.Reserve(newCapacity)

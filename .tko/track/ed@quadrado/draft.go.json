@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-21_10-58-11",
+            "content": "@@ -143,38 +143,44 @@\n t.Printf(%22%25d\n-%5E\n+ %5E \n 2 = %25d\n-%5E\n+ %5E \n 2 + 2\n-*\n+ * \n %25d + 1 = ?%5Cn\n@@ -302,22 +302,28 @@\n (%22%25d\n-%5E\n+ %5E \n 2 = %25d\n-%5E\n+ %5E \n 2 + 2\n-*\n+ * \n %25d +\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-21_10-59-44",
+            "content": "@@ -96,10 +96,13 @@\n ln(%22\n-1%5E\n+ 1 %5E \n 2 = \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-21_11-00-36",
+            "content": "package main\nimport \"fmt\"\n\nfunc calcular_quadrado(n int) int{\n\n    if n == 1{\n        fmt.Println(\"1^2 = 1\")\n        return 1\n    }\n\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", n, n - 1, n - 1)\n    anterior := calcular_quadrado(n - 1)\n    atual := anterior + 2 * (n - 1) + 1\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", n, n - 1, n - 1, atual)\n\n    return atual\n}\nfunc main() {\n    var n int\n\n    if _, err := fmt.Scan(&n); err != nil{\n        return\n    }\n    calcular_quadrado(n)\n}\n",
+            "lines": "25"
+        }
+    ]
+}
