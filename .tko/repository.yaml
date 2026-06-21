@@ -19,11 +19,11 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
 - ed@rec
-- ed@map_set
+- ed@list
 - ed@vector
 - ed@basic
+- ed@map_set
 flags:
   inbox: all
   panel: skills
@@ -33,5 +33,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@padroes2
-selected_index: 35
+selected: ed@padroes3
+selected_index: 36

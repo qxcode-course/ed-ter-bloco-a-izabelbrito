@@ -1,0 +1,8 @@
+2026-06-21 10:31:23, MOVE, v:1, k:ed@padroes3, mode:DOWN
+2026-06-21 10:31:37, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-06-21 10:32:07, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-06-21 10:33:02, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-06-21 10:38:49, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:1, size:20
+2026-06-21 10:39:24, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:100, size:20
+2026-06-21 10:39:33, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-06-21 10:40:40, SELF, v:1, k:ed@padroes3, self:1, rate:100, study:5

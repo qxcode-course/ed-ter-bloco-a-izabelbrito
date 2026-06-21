@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-21_10-38-49",
+            "content": "@@ -161,20 +161,16 @@\n tos(n, m\n- - 1\n ) + acre\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-21_10-39-24",
+            "content": "package main\nimport \"fmt\"\n\nfunc contar_pontos(n, m int) int{\n    if m == 1{\n        return 1\n    }\n\n    acrescimo := (n - 2) * (m - 1) + 1\n    return contar_pontos(n, m - 1) + acrescimo\n}\nfunc main() {\n    var n, m int\n\n    if _, err:= fmt.Scan(&n, &m); err != nil{\n        return\n    }\n\n    fmt.Println(contar_pontos(n, m))\n}\n",
+            "lines": "20"
+        }
+    ]
+}
