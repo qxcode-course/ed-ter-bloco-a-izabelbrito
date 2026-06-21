@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-20_21-31-09",
+            "content": "@@ -45,13 +45,8 @@\n int)\n- int \n %7B%0A%0A \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-20_21-32-01",
+            "content": "package main\nimport \"fmt\"\n\nfunc num_pecas(n int) int {\n\n    if n == 1{\n       \n        return 3\n    }\n\n    return num_pecas((n - 1)) + (2 * n + 1)\n}\nfunc main() {\n    var n int\n\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n        \n    }\n    fmt.Println(num_pecas(n))\n}\n",
+            "lines": "21"
+        }
+    ]
+}

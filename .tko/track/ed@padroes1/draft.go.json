@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-20_21-24-33",
+            "content": "package main\nimport \"fmt\"\n\nfunc contar_bloquinhos(n int) int{\n\n    if n == 1{\n        return 20\n    }\n\n    return contar_bloquinhos(n-1) + 8\n}\nfunc main() {\n    var n int\n\n    if _, err := fmt.Scan(&n); err != nil{\n        return\n    }\n\n    fmt.Println(contar_bloquinhos(n))\n}\n",
+            "lines": "20"
+        }
+    ]
+}
