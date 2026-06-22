@@ -49,3 +49,5 @@
 2026-06-21 19:28:34, MOVE, v:1, k:ed@lista_d3, mode:BACK
 2026-06-21 19:29:37, MOVE, v:1, k:ed@permutacoes, mode:DOWN
 2026-06-21 19:29:44, MOVE, v:1, k:ed@sudoku, mode:DOWN
+2026-06-21 23:15:37, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-21 23:25:42, MOVE, v:1, k:ed@subset_sum, mode:BACK

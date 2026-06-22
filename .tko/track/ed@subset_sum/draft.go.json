@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_10-05-34",
+            "content": "@@ -23,398 +23,53 @@\n mt%22%0A\n-%0Afunc tem_soma(vetor %5B%5Dint, alvo int, i int, soma int) bool%7B%0A    return false%0A%7D%0Afunc main() %7B%0A    var n, alvo int%0A%0A    if _, err := fmt.Scan(&n, &alvo); err != nil%7B%0A        return%0A    %7D%0A%0A    vetor := make(%5B%5Dint, n)%0A    for i := 0; i %3C n; i++ %7B%0A        fmt.Scan(&vetor%5Bi%5D)   %0A    %7D%0A%0A    if tem_soma(vetor, alvo, 0, 0)%7B%0A        fmt.Println(%22true%22)%0A    %7Delse%7B%0A        fmt.Println(%22false%22)%0A    %7D\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-22_10-18-45",
+            "content": "@@ -83,162 +83,8 @@\n ool%7B\n-%0A%0A    if soma == alvo%7B%0A        return false%0A    %7D%0A%0A    if soma %3C alvo%7B%0A        return false%0A    %7D%0A%0A    if i == len(vetor)%7B%0A        return false%0A    %7D%0A    \n %0A   \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-22_10-25-28",
+            "content": "@@ -232,159 +232,8 @@\n    %7D\n-%0A%0A    if tem_soma(vetor, alvo, i + 1, soma + vetor%5Bi%5D)%7B%0A        return true%0A    %7D%0A%0A    if tem_soma(vetor, alvo, i + 1, soma)%7B%0A        return true%0A    %7D\n %0A   \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-22_10-30-21",
+            "content": "@@ -109,35 +109,36 @@\n %0A        return \n-tru\n+fals\n e%0A    %7D%0A%0A    if \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-22_10-30-39",
+            "content": "@@ -145,9 +145,9 @@\n oma \n-%3E\n+%3C\n  alv\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-22_10-32-48",
+            "content": "package main\nimport \"fmt\"\n\nfunc tem_soma(vetor []int, alvo int, i int, soma int) bool{\n\n    if soma == alvo{\n        return true\n    }\n\n    if soma > alvo{\n        return false\n    }\n\n    if i == len(vetor){\n        return false\n    }\n\n    if tem_soma(vetor, alvo, i + 1, soma + vetor[i]){\n        return true\n    }\n\n    if tem_soma(vetor, alvo, i + 1, soma){\n        return true\n    }\n    \n    return false\n}\nfunc main() {\n    var n, alvo int\n\n    if _, err := fmt.Scan(&n, &alvo); err != nil{\n        return\n    }\n\n    vetor := make([]int, n)\n    for i := 0; i < n; i++ {\n        fmt.Scan(&vetor[i])   \n    }\n\n    if tem_soma(vetor, alvo, 0, 0){\n        fmt.Println(\"true\")\n    }else{\n        fmt.Println(\"false\")\n    }\n}\n",
+            "lines": "45"
+        }
+    ]
+}

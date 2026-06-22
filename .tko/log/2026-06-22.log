@@ -1,0 +1,66 @@
+2026-06-22 10:05:32, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-22 10:05:34, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:5
+2026-06-22 10:05:41, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-22 10:05:44, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-22 10:18:45, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:24, size:24
+2026-06-22 10:25:28, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:24, size:37
+2026-06-22 10:30:21, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:24, size:45
+2026-06-22 10:30:39, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:28, size:45
+2026-06-22 10:32:48, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:45
+2026-06-22 10:32:52, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-22 10:33:11, SELF, v:1, k:ed@subset_sum, self:1, rate:100, study:30, concept:1
+2026-06-22 10:33:53, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-22 10:45:49, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-06-22 10:48:39, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-22 10:50:09, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-06-22 15:42:00, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-22 16:02:57, EXEC, v:1, k:ed@distancia, mode:FULL, size:70, fail:COMP
+2026-06-22 16:03:19, EXEC, v:1, k:ed@distancia, mode:FULL, rate:71, size:70
+2026-06-22 16:03:20, EXEC, v:1, k:ed@distancia, mode:FULL, rate:71
+2026-06-22 16:09:57, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100, size:72
+2026-06-22 16:10:00, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-06-22 16:10:21, SELF, v:1, k:ed@distancia, self:1, rate:100, study:30, concept:1
+2026-06-22 16:10:40, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-06-22 16:11:21, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-06-22 16:12:05, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-22 16:12:35, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-22 16:16:44, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-06-22 16:46:35, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-06-22 16:46:49, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-22 16:47:33, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-22 16:48:53, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-22 17:05:43, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:60
+2026-06-22 17:07:56, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:60
+2026-06-22 17:12:06, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:71
+2026-06-22 17:15:57, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:85
+2026-06-22 17:24:14, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:90
+2026-06-22 17:25:30, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:90
+2026-06-22 17:34:19, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:86
+2026-06-22 17:37:10, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:86
+2026-06-22 17:38:00, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:86
+2026-06-22 17:39:13, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:100, size:86
+2026-06-22 17:39:16, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-22 17:39:48, SELF, v:1, k:ed@sudoku, self:1, rate:100, study:30, concept:1, debug:1
+2026-06-22 17:40:23, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-22 17:43:11, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-22 17:43:48, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-22 18:01:27, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:137
+2026-06-22 18:06:21, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:152
+2026-06-22 18:09:24, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:154
+2026-06-22 18:19:37, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:165
+2026-06-22 18:30:15, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:184
+2026-06-22 18:30:43, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:184
+2026-06-22 18:30:47, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-22 18:31:06, SELF, v:1, k:ed@bufferring, self:1, rate:100, study:35, concept:1
+2026-06-22 18:31:41, MOVE, v:1, k:ed@fila_enc, mode:DOWN
+2026-06-22 18:31:59, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-06-22 18:46:43, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:0, size:103
+2026-06-22 18:53:48, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:100, size:131
+2026-06-22 18:53:57, MOVE, v:1, k:ed@fila_enc, mode:BACK
+2026-06-22 18:54:34, SELF, v:1, k:ed@fila_enc, self:1, rate:100, study:15, concept:1
+2026-06-22 18:55:11, MOVE, v:1, k:ed@pilha, mode:DOWN
+2026-06-22 18:55:22, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-22 18:55:58, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-22 18:56:03, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-06-22 18:56:27, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:100, size:123
+2026-06-22 18:56:32, MOVE, v:1, k:ed@fila_enc, mode:BACK

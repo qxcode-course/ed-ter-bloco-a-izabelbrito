@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_17-05-43",
+            "content": "@@ -214,17 +214,17 @@\n  matriz%5B\n-i\n+l\n %5D%5Bc%5D == \n@@ -533,36 +533,35 @@\n          return \n-fals\n+tru\n e%0A           %7D%0A \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-22_17-07-56",
+            "content": "@@ -655,178 +655,8 @@\n ool%7B\n-%0A%0A    if index == n * n%7B%0A        return true%0A    %7D%0A%0A    l := index / n%0A    c := index %25 n%0A%0A    if matriz%5Bl%5D%5Bc%5D != '.'%7B%0A        return resolver(matriz, index + 1, n)%0A    %7D\n %0A   \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-22_17-12-06",
+            "content": "@@ -825,302 +825,8 @@\n    %7D\n-%0A%0A    for d := 0; d %3C n; d++ %7B%0A        digito := rune('0' + d)%0A%0A        if pode_colocar(matriz, l, c, n, digito)%7B%0A            matriz%5Bl%5D%5Bc%5D = digito%0A%0A            if resolver(matriz, index + 1, n) %7B%0A                return true%0A            %7D%0A            matriz%5Bl%5D%5Bc%5D = '.'%0A        %7D%0A        %0A    %7D\n %0A   \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-06-22_17-15-57",
+            "content": "@@ -1251,17 +1251,17 @@\n %5B%5Drune, \n-n\n+0\n )%0A   for\n@@ -1332,94 +1332,34 @@\n     \n-%0A    if len(linha) %3E 0%7B%0A        matriz%5Bi%5D = %5B%5Drune(linha)%0A    %7Delse%7B%0A        i--%0A    %7D\n+matriz%5Bi%5D = %5B%5Drune(linha) \n %0A   \n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-06-22_17-24-14",
+            "content": "@@ -836,17 +836,17 @@\n or d := \n-1\n+0\n ; d %3C n;\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-06-22_17-25-30",
+            "content": "@@ -1198,36 +1198,32 @@\n n); err != nil%7B%0A\n-    \n     return%0A   %7D%0A\n@@ -1311,67 +1311,58 @@\n     \n-if _, err := fmt.Scan(&n); err != nil%7B%0A        return\n+fmt.Scan(&linha)%0A    %0A    if len(linha) %3E 0%7B\n %0A   \n-%7D%0A\n+  \n    m\n@@ -1389,17 +1389,47 @@\n nha)%0A   \n-%7D\n+ %7Delse%7B%0A        i--%0A    %7D%0A   %7D%0A\n %0A   if r\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-06-22_17-34-19",
+            "content": "@@ -1334,21 +1334,17 @@\n t.Scan(&\n-linha\n+n\n ); err !\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-06-22_17-37-10",
+            "content": "@@ -495,17 +495,17 @@\n icioL + \n-i\n+1\n %5D%5Binicio\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-06-22_17-38-00",
+            "content": "@@ -842,17 +842,16 @@\n = 1; d %3C\n-=\n  n; d++ \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-06-22_17-39-13",
+            "content": "package main\nimport \"fmt\"\n\nfunc pode_colocar(matriz [][]rune, l int, c int, n int, digito rune) bool{\n\n    for i := 0; i < n; i++ {\n        if matriz[l][i] == digito{\n            return false\n        }\n\n        if matriz[i][c] == digito {\n            return false\n        }   \n    }\n\n    sub := 2\n    if n == 9 {\n        sub = 3\n    }\n\n    inicioL := (l / sub) *sub\n    inicioC := (c / sub) *sub\n\n    for i := 0; i < sub; i++ {\n        for j := 0; j < sub; j++ {\n          \n        if matriz[inicioL + i][inicioC + j] == digito{\n            return false\n           }\n        }  \n    }\n\n    return true\n}\n\nfunc resolver(matriz[][]rune, index int, n int) bool{\n\n    if index == n * n{\n        return true\n    }\n\n    l := index / n\n    c := index % n\n\n    if matriz[l][c] != '.'{\n        return resolver(matriz, index + 1, n)\n    }\n\n    for d := 1; d <= n; d++ {\n        digito := rune('0' + d)\n\n        if pode_colocar(matriz, l, c, n, digito){\n            matriz[l][c] = digito\n\n            if resolver(matriz, index + 1, n) {\n                return true\n            }\n            matriz[l][c] = '.'\n        }\n        \n    }\n    return false\n}\n\nfunc main() {\n   var n int\n\n   if _, err := fmt.Scan(&n); err != nil{\n        return\n   }\n\n   matriz := make([][]rune, n)\n   for i := 0; i < n; i++ {\n    var linha string\n    if _, err := fmt.Scan(&linha); err != nil{\n        return\n   }\n   matriz[i] = []rune(linha)\n   }\n   if resolver(matriz, 0, n){\n    for i := 0; i < n; i++ {\n        fmt.Println(string(matriz[i]))\n        \n    }\n   }\n}\n",
+            "lines": "86"
+        }
+    ]
+}

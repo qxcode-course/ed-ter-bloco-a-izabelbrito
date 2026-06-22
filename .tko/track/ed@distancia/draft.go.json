@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2026-04-28_09-58-56",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -23,1222 +23,53 @@\n mt%22%0A\n-%0A\n func \n-pode_inserir(vetor %5B%5Drune, index int, limite int, digito rune) bool%7B%0A%0A    inicio := index - limite%0A    %0A    if inicio %3C 0%7B%0A        inicio = 0%0A    %7D%0A%0A    for i := inicio; i %3C index; i++ %7B%0A        if vetor%5Bi%5D == digito %7B%0A            return false%0A        %7D%0A    %7D%0A%0A    fim:= index + limite%0A%0A    if fim %3E= len(vetor)%7B%0A        fim = len(vetor - 1)%0A    %7D%0A%0A    for i := index + 1; i %3C= fim; i++ %7B%0A        if vetor%5Bi%5D == digito%7B%0A            return false%0A        %7D   %0A    %7D%0A%0A    return true%0A%7D%0A%0Afunc preencher(vetor %5B%5Drune, index int, limite int) bool%7B%0A    if index == len(vetor)%7B%0A        return true%0A    %7D%0A%0A    if vetor%5Bindex%5D != '.'%7B%0A        return preencher(vetor, index + 1, limite)%0A    %7D%0A%0A    for d := 0; d %3C= limite; d++%7B%0A        digito := rune('0' + d)%0A%0A        if pode_inserir(vetor, index, limite, digito)%7B%0A            vetor%5Bindex%5D = digito%0A%0A            if preencher(vetor, index + 1, limite)%7B%0A                return true%0A            %7D%0A        %7D%0A    %7D%0A%0A    return false%0A%7D%0A%0Afunc main() %7B%0A   var sequencia string%0A   var limite int%0A%0A   if _, err := fmt.Scan(&sequencia, &limite); err != nil%7B%0A        return%0A   %7D%0A%0A   vetor := %5B%5Drune(sequencia)%0A%0A   if preencher(vetor, 0, limite)%7B%0A    fmt.Println(string(vetor))%0A   %7D\n+main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-06-22_16-02-57",
+            "content": "@@ -365,13 +365,13 @@\n etor\n-)\n  - 1\n+)\n %0A   \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-22_16-03-19",
+            "content": "@@ -962,40 +962,8 @@\n    %7D\n-%0A%0A            vetor%5Bindex%5D = '.'\n %0A   \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-22_16-09-57",
+            "content": "package main\nimport \"fmt\"\n\nfunc pode_inserir(vetor []rune, index int, limite int, digito rune) bool{\n\n    inicio := index - limite\n    \n    if inicio < 0{\n        inicio = 0\n    }\n\n    for i := inicio; i < index; i++ {\n        if vetor[i] == digito {\n            return false\n        }\n    }\n\n    fim:= index + limite\n\n    if fim >= len(vetor){\n        fim = len(vetor) - 1\n    }\n\n    for i := index + 1; i <= fim; i++ {\n        if vetor[i] == digito{\n            return false\n        }   \n    }\n\n    return true\n}\n\nfunc preencher(vetor []rune, index int, limite int) bool{\n    if index == len(vetor){\n        return true\n    }\n\n    if vetor[index] != '.'{\n        return preencher(vetor, index + 1, limite)\n    }\n\n    for d := 0; d <= limite; d++{\n        digito := rune('0' + d)\n\n        if pode_inserir(vetor, index, limite, digito){\n            vetor[index] = digito\n\n            if preencher(vetor, index + 1, limite){\n                return true\n            }\n\n            vetor[index] = '.'\n        }\n    }\n\n    return false\n}\n\nfunc main() {\n   var sequencia string\n   var limite int\n\n   if _, err := fmt.Scan(&sequencia, &limite); err != nil{\n        return\n   }\n\n   vetor := []rune(sequencia)\n\n   if preencher(vetor, 0, limite){\n    fmt.Println(string(vetor))\n   }\n}\n",
+            "lines": "72"
         }
     ]
 }
