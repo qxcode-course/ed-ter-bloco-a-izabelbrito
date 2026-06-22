@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_19-22-39",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc main() {\n\n\tfila:= NewQueue[rune]()\n\n\tfor i := 0; i < 16; i++ {\n\t\tfila.Enqueue(rune('A' + i))\t\n\t}\n\n\tfor i := 0; i < 15; i++ {\n\t\tvar gols_time1, gols_time2 int\n\n\t\tif _, err := fmt.Scan(&gols_time1, &gols_time2); err != nil{\n\t\t\tbreak\n\t\t}\n\n\t\ttime1 := fila.Dequeue()\n\t\ttime2 := fila.Dequeue()\n\n\t\tif gols_time1 > gols_time2{\n\t\t\tfila.Enqueue(time1)\n\t\t}else{\n\t\t\tfila.Enqueue(time2)\n\t\t}\t\n\t}\n\n\tcampeao := fila.Dequeue()\n\tfmt.Printf(\"%c\\n\", campeao)\n}\n",
+            "lines": "33"
+        }
+    ]
+}
