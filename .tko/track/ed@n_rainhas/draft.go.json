@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_20-54-35",
+            "content": "@@ -652,104 +652,8 @@\n + 1)\n-%0A%0A            colunas%5Bcol%5D = false%0A            diag1%5Bd1%5D = false%0A            diag2%5Bd2%5D = false%0A%0A\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-22_20-58-16",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc salvar_rainha(n int) int{\n    count := 0\n\n    colunas := make([]bool, n)\n    diag1 := make([]bool, 2 * n)\n    diag2 := make([]bool, 2 * n)\n\n    var backtrack func(linha int)\n    backtrack = func (linha int)  {\n        if linha == n{\n            count++\n            return \n        }\n\n        for col := 0; col < n; col++{\n            d1 := linha - col + n\n            d2 := linha + col\n\n            if colunas[col] || diag1[d1] || diag2[d2]{\n                continue\n            }\n             \n            colunas[col] = true\n            diag1[d1] = true\n            diag2[d2] = true\n            backtrack(linha + 1)\n\n            colunas[col] = false\n            diag1[d1] = false\n            diag2[d2] = false\n\n\n        }\n    }\n    backtrack(0)\n    return count\n}\nfunc main() {\n    var n int\n\n    if _, err := fmt.Scan(&n); err == nil{\n        fmt.Println(salvar_rainha(n))\n    }\n}\n",
+            "lines": "50"
+        }
+    ]
+}
