@@ -1,0 +1,4 @@
+2026-06-26 12:30:34, MOVE, v:1, k:ed@altura, mode:DOWN
+2026-06-26 12:30:41, MOVE, v:1, k:ed@altura, mode:PICK
+2026-06-26 12:33:01, EXEC, v:1, k:ed@altura, mode:FULL, rate:0, size:108
+2026-06-26 12:33:19, MOVE, v:1, k:ed@altura, mode:BACK
